@@ -1,8 +1,5 @@
 import numpy
 
-
-
-
 def file_open(file):
     with open(file) as file:   #file reading
         lines = file.readlines()
@@ -18,14 +15,11 @@ def solve():
 
     sudoku = "000000010400000000020000000000050407008000300001090000300400200050100000000806000"   #1st line for test
     print(sudoku)
-    print(list (sudoku))  #parsing string 
-    sudoku = numpy.array(range(81)).reshape((9, 9))
-    print (sudoku)
-   # print (numpy.zeros((9, 9)))   #numpy array declaration
-
-
-   	#sudoku_array = numpy.zeros(9,9)
-  # 	print numpy.sudoku
+    sudoku = list(map(int, sudoku)) #mapping to int in array 
+    sudoku =  numpy.resize(sudoku, (9,9)) #changing 
+  #  sudoku = numpy.array(range(81)).reshape((9, 9)) #reshaping string to 9x9 array shape
+    print (sudoku) 
+   
 
     
 
